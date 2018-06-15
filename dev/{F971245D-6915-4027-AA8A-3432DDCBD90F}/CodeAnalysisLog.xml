@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="c:\program files (x86)\microsoft visual studio 14.0\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
+<FxCopReport Version="14.0">
+ <Targets>
+  <Target Name="C:\Users\nicol\AppData\Local\Temp\tmpB032.tmp.cadir\bin\App_Web_oxi4q2wi.dll">
+   <Modules>
+    <Module Name="app_web_oxi4q2wi.dll">
+     <Namespaces>
+      <Namespace Name="">
+       <Types>
+        <Type Name="Page" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Page_Load(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message Id="System.String.LastIndexOf(System.String)" TypeName="SpecifyStringComparison" Category="Microsoft.Globalization" CheckId="CA1307" Status="Active" Created="2018-06-15 12:44:40Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="c:\Users\nicol\Documents\dev\node_modules\selenium-webdriver\lib\test\data" File="Page.aspx.cs" Line="10">Puesto que el comportamiento de 'string.LastIndexOf(string)' podría variar en función de la configuración regional del usuario actual, reemplace esta llamada en 'Page.Page_Load(object, EventArgs)' por una llamada a 'string.LastIndexOf(string, StringComparison)'. Si el resultado de 'string.LastIndexOf(string, StringComparison)' se mostrará al usuario, como cuando se ordena una lista de elementos para mostrarlos en un cuadro de lista, especifique 'StringComparison.CurrentCulture' o 'StringComparison.CurrentCultureIgnoreCase' como parámetro 'StringComparison'. Si se comparan identificadores que no distinguen mayúsculas y minúsculas, como rutas de acceso de archivo, variables de entorno o claves y valores del Registro, especifique 'StringComparison.OrdinalIgnoreCase'. De lo contrario, si se están comparando identificadores que sí distinguen mayúsculas y minúsculas, especifique 'StringComparison.Ordinal'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+  <Target Name="C:\Users\nicol\AppData\Local\Temp\tmpB032.tmp.cadir\bin\App_Web_pbcntrl4.dll">
+   <Modules>
+    <Module Name="app_web_pbcntrl4.dll">
+     <Namespaces>
+      <Namespace Name="">
+       <Types>
+        <Type Name="Page" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Page_Load(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message Id="System.String.LastIndexOf(System.String)" TypeName="SpecifyStringComparison" Category="Microsoft.Globalization" CheckId="CA1307" Status="Active" Created="2018-06-15 12:44:40Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="c:\Users\nicol\Documents\dev\node_modules\webdriver-js-extender\node_modules\selenium-webdriver\lib\test\data" File="Page.aspx.cs" Line="10">Puesto que el comportamiento de 'string.LastIndexOf(string)' podría variar en función de la configuración regional del usuario actual, reemplace esta llamada en 'Page.Page_Load(object, EventArgs)' por una llamada a 'string.LastIndexOf(string, StringComparison)'. Si el resultado de 'string.LastIndexOf(string, StringComparison)' se mostrará al usuario, como cuando se ordena una lista de elementos para mostrarlos en un cuadro de lista, especifique 'StringComparison.CurrentCulture' o 'StringComparison.CurrentCultureIgnoreCase' como parámetro 'StringComparison'. Si se comparan identificadores que no distinguen mayúsculas y minúsculas, como rutas de acceso de archivo, variables de entorno o claves y valores del Registro, especifique 'StringComparison.OrdinalIgnoreCase'. De lo contrario, si se están comparando identificadores que sí distinguen mayúsculas y minúsculas, especifique 'StringComparison.Ordinal'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+ </Targets>
+ <Rules>
+  <Rule TypeName="SpecifyStringComparison" Category="Microsoft.Globalization" CheckId="CA1307">
+   <Name>Especificar StringComparison</Name>
+   <Description>Si sale una sobrecarga que toma un argumento StringComparison, se debería llamar a ésta en favor de una sobrecarga que no lo haga.</Description>
+   <Resolution Name="Default">Puesto que el comportamiento de {0} podría variar en función de la configuración regional del usuario actual, reemplace esta llamada en {1} por una llamada a {2}. Si el resultado de {2} se mostrará al usuario, como cuando se ordena una lista de elementos para mostrarlos en un cuadro de lista, especifique 'StringComparison.CurrentCulture' o 'StringComparison.CurrentCultureIgnoreCase' como parámetro 'StringComparison'. Si se comparan identificadores que no distinguen mayúsculas y minúsculas, como rutas de acceso de archivo, variables de entorno o claves y valores del Registro, especifique 'StringComparison.OrdinalIgnoreCase'. De lo contrario, si se están comparando identificadores que sí distinguen mayúsculas y minúsculas, especifique 'StringComparison.Ordinal'.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/bb386080.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="globalizationrules.dll" Version="14.0.0.0" />
+  </Rule>
+ </Rules>
+ <Localized>
+  <String Key="Category">Categoría</String>
+  <String Key="Certainty">Certeza</String>
+  <String Key="CollapseAll">Contraer todo</String>
+  <String Key="CheckId">Comprobar id.</String>
+  <String Key="Error">Error</String>
+  <String Key="Errors">errores</String>
+  <String Key="ExpandAll">Expandir todo</String>
+  <String Key="Help">Ayuda</String>
+  <String Key="Line">Línea</String>
+  <String Key="Messages">mensajes</String>
+  <String Key="LocationNotStoredInPdb">[Ubicación no almacenada en Pdb]</String>
+  <String Key="Project">Proyecto</String>
+  <String Key="Resolution">Resolución</String>
+  <String Key="Rule">Regla</String>
+  <String Key="RuleFile">Archivo de regla</String>
+  <String Key="RuleDescription">Descripción de la regla</String>
+  <String Key="Source">Origen</String>
+  <String Key="Status">Estado</String>
+  <String Key="Target">Círculos concéntricos</String>
+  <String Key="Warning">Advertencia</String>
+  <String Key="Warnings">advertencias</String>
+  <String Key="ReportTitle">Informe de análisis del código</String>
+ </Localized>
+</FxCopReport>
